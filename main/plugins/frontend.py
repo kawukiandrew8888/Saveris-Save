@@ -11,7 +11,7 @@ from main.plugins.helpers import get_link, join, screenshot
 from telethon import events
 from pyrogram.errors import FloodWait
 
-from ethon.telefunc import force_sub
+from main.ethon.telefunc import force_sub
 
 ft = f"To use this bot you've to join @{fs}."
 
