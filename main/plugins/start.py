@@ -4,7 +4,7 @@ import os
 from .. import bot as Drone
 from telethon import events, Button
 
-from ethon.mystarts import start_srb
+from main.ethon.mystarts import start_srb
     
 S = '/' + 's' + 't' + 'a' + 'r' + 't'
 
