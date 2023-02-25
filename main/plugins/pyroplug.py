@@ -8,7 +8,7 @@ from main.plugins.helpers import screenshot
 
 from pyrogram import Client, filters
 from pyrogram.errors import ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid, FloodWait
-from ethon.pyfunc import video_metadata
+from main.ethon.pyfunc import video_metadata
 from telethon import events
 
 def thumbnail(sender):
