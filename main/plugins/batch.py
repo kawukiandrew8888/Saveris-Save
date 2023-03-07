@@ -9,7 +9,7 @@ import time, os, asyncio
 
 from .. import bot as Drone
 from .. import userbot, Bot, AUTH
-from .. import FORCESUB as fs
+#from .. import FORCESUB as fs
 from main.plugins.pyroplug import check, get_bulk_msg
 from main.plugins.helpers import get_link, screenshot
 
@@ -19,8 +19,8 @@ from telethon.tl.types import DocumentAttributeVideo
 from pyrogram import Client 
 from pyrogram.errors import FloodWait
 
-from ethon.pyfunc import video_metadata
-from ethon.telefunc import force_sub
+from main.ethon.pyfunc import video_metadata
+#from ethon.telefunc import force_sub
 
 ft = f"To use this bot you've to join @{fs}."
 
@@ -64,7 +64,7 @@ async def _batch(event):
             try:
                 value = int(_range.text)
                 if value > 1000:
-                    return await conv.send_message("You can only get upto 100 files in a single batch.")
+                    return await conv.send_message("You can only get upto 1000 files in a single batch.")
             except ValueError:
                 return await conv.send_message("Range must be an integer!")
             #if s != True:
