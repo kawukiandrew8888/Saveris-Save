@@ -19,7 +19,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from pyrogram import Client 
 from pyrogram.errors import FloodWait
 
-from main.ethon.pyfunc import video_metadata
+#from main.ethon.pyfunc import video_metadata
 #from main.ethon.telefunc import force_sub
 
 #ft = f"To use this bot you've to join @{fs}."
@@ -37,14 +37,14 @@ async def _batch(event):
         return
     # wtf is the use of fsub here if the command is meant for the owner? 
     # well am too lazy to clean 
-    s, r = await force_sub(event.client, fs, event.sender_id, ft) 
-    if s == True:
-        await event.reply(r)
-        return       
+    #s, r = await force_sub(event.client, fs, event.sender_id, ft) 
+    #if s == True:
+        #await event.reply(r)
+        #return       
     if f'{event.sender_id}' in batch:
         return await event.reply("You've already started one batch, wait for it to complete you dumbfuck owner!")
     async with Drone.conversation(event.chat_id) as conv: 
-        if s != True:
+        #if s != True:
             await conv.send_message("Send me the message link you want to start saving from, as a reply to this message.", buttons=Button.force_reply())
             try:
                 link = await conv.get_reply()
