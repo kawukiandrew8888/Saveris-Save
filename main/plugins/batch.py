@@ -67,9 +67,9 @@ async def _batch(event):
                     return await conv.send_message("You can only get upto 1000 files in a single batch.")
             except ValueError:
                 return await conv.send_message("Range must be an integer!")
-            if s != True:
-                await conv.send_message(r)
-                return
+            #if s != True:
+                #await conv.send_message(r)
+                #return
             batch.append(f'{event.sender_id}')
             batch_.append(f'{event.sender_id}')
             cd = await conv.send_message("**Batch process ongoing.**\n\nProcess completed: ", 
