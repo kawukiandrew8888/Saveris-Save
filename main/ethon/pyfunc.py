@@ -10,7 +10,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 
 
 #Fast upload/download methods:
-
+#time_formatter--------------------------------------
 def time_formatter(milliseconds: int) -> str:
     """Inputs time in milliseconds, to get beautified time,
     as string"""
@@ -42,6 +42,7 @@ def hbs(size):
         raised_to_pow += 1
     return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
 
+#progress------------------------------------;--;;;
 async def progress(current, total, event, start, type_of_ps, file=None):
     now = time.time()
     diff = now - start
@@ -74,6 +75,7 @@ async def progress(current, total, event, start, type_of_ps, file=None):
 #Why these methods? : Using progress of telethon makes upload/download slow due to callbacks
 #these method allows to upload/download in fastest way with progress bars.
 
+#fast_upload-------------------------------------------
 async def fast_upload(file, name, time, bot, event, msg):
     with open(file, "rb") as f:
         result = await upload_file(
@@ -92,6 +94,7 @@ async def fast_upload(file, name, time, bot, event, msg):
         )
     return result
 
+#fast_download--------------------------------
 async def fast_download(filename, file, bot, event, time, msg):
     with open(filename, "wb") as fk:
         result = await download_file(
@@ -109,11 +112,9 @@ async def fast_download(filename, file, bot, event, time, msg):
             ),
         )
     return result
-"""
----------------------------------------------------------------------------------
-"""
 
-#Forcesub
+
+#Forcesub----------------------------
 async def force_sub(client, channel, id, ft):
     s, r = False, None
     try:
@@ -129,6 +130,7 @@ async def force_sub(client, channel, id, ft):
         s, r = True, "ERROR: Add in ForceSub channel, or check your channel id."
     return s, r
 
+#video_metadata--------------------------
 #to get width, height and duration(in sec) of a video
 def video_metadata(file):
     vcap = cv2.VideoCapture(f'{file}')  
@@ -139,3 +141,7 @@ def video_metadata(file):
     duration = round(frame_count / fps)
     data = {'width' : width, 'height' : height, 'duration' : duration }
     return data
+
+"""
+---------------------------------------------------------------------------------
+"""
