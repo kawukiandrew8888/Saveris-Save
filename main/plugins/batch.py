@@ -36,7 +36,7 @@ async def _batch(event):
     if not event.is_private:
         return
     # wtf is the use of fsub here if the command is meant for the owner? 
-    # well am too lazy to clean 
+    # well am too lazy to clean this 
     s, r = await force_sub(event.client, fs, event.sender_id, ft) 
     if s == True:
         await event.reply(r)
