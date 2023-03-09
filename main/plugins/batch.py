@@ -20,7 +20,7 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait
 
 from main.ethon.pyfunc import video_metadata
-from ethon.telefunc import force_sub
+from main.ethon.telefunc import force_sub
 
 ft = f"To use this bot you've to join @{fs}."
 
