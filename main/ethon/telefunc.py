@@ -3,6 +3,8 @@ import time
 import asyncio
 
 from .FasterTg import upload_file, download_file
+from telethon.errors.rpcerrorlist import UserNotParticipantError
+from telethon.tl.functions.channels import GetParticipantRequest
 
 from telethon import events
 
