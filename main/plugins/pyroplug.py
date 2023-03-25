@@ -5,7 +5,8 @@ import asyncio, time, os
 from .. import Bot, bot
 from main.plugins.progress import progress_for_pyrogram
 from main.plugins.helpers import screenshot
-
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
 from pyrogram import Client, filters
 from pyrogram.errors import ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid, FloodWait
 from main.ethon.pyfunc import video_metadata
