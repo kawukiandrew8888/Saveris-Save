@@ -93,7 +93,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
                 if str(file).split(".")[-1] in ['webm', 'mkv', 'mpe4', 'mpeg']:
                     path = str(file).split(".")[0] + ".mp4"
                     #os.rename(file, path) 
-                    #file = str(file).split(".")[0] + ".mp4"
+                    file = str(file).split(".")[0] + ".mp4"
                 data = video_metadata(file)
                 duration = data["duration"]
                 try:
