@@ -96,6 +96,10 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
                     os.rename(file, path) 
                     file = str(file).split(".")[0] + ".mp4"
                 #data = video_metadata(file)
+                metadata = extractMetadata(createParser(file))
+                if metadata.has("duration"):
+                    duration = metadata.get('duration').seconds
+     		
                 #duration = data["duration"]
                 try:
                     thumb_path = await screenshot(file, duration, sender)
