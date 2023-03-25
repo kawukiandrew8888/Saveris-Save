@@ -29,7 +29,7 @@ user=[]
 async def clone(event):
     if event.is_reply:
         reply = await event.get_reply_message()
-        if message.reply_text == message:
+        if reply == message:
             return
     try:
         link = get_link(event.text)
