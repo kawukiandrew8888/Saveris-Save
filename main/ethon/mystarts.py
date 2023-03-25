@@ -8,7 +8,7 @@ async def start_srb(event, st):
                       buttons=[
                               [Button.inline("SET THUMB.", data="set"),
                                Button.inline("REM THUMB.", data="rem")],
-                              [Button.url("⚙️ SETTINGS", url="t.me/andydroids2")]])
+                              [Button.url("🖊️ DEVELOPER", url="t.me/andydroids2")]])
                               
     
 async def vc_menu(event):
