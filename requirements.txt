@@ -1,6 +1,6 @@
 #Github.com-Vasusen-code
 
-https://github.com/vasusen-code/Telethon/archive/refs/tags/v1.24.0.zip
+#https://github.com/vasusen-code/Telethon/archive/refs/tags/v1.24.0.zip
 python-decouple==3.7
 cryptg
 tgcrypto
