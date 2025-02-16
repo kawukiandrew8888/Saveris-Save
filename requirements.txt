@@ -9,3 +9,4 @@ pyrogram
 opencv-python==4.7.0.68
 hachoir==3.2.0
 telethon
+flask
