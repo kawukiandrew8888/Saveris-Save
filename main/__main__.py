@@ -1,3 +1,5 @@
+import os
+from flask import Flask
 import glob
 from pathlib import Path
 from main.utils import load_plugins
@@ -19,5 +21,15 @@ for name in files:
 print("Successfully deployed!")
 print("By MaheshChauhan • DroneBots")
 
+#code 👇 added by kawuki
+app = Flask(__name__)
+
+@app.route('/health')
+def health_check():
+   return 'OK', 200
+#code 👆 added by kawuki
+
 if __name__ == "__main__":
-    bot.run_until_disconnected()
+    #bot.run_until_disconnected()
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host='0.0.0.0', port=port)
